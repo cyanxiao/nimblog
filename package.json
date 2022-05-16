@@ -1,0 +1,35 @@
+{
+  "name": "nimblog",
+  "version": "0.0.0",
+  "description": "Build blog within several lines of codes.",
+  "source": "src/index.js",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build",
+    "lint": "eslint --fix src && prettier --write src"
+  },
+  "keywords": [
+    "blog",
+    "script",
+    "markdown"
+  ],
+  "author": "Chell",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "parcel": "^2.5.0",
+    "prettier": "2.6.2"
+  },
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
