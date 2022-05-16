@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Home() {
-  return <h1>nimblog</h1>;
+function Home({ title = 'Your Blog Title' }) {
+  return <h1>{title}</h1>;
 }
 
 export default Home;

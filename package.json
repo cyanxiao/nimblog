@@ -2,7 +2,7 @@
   "name": "nimblog",
   "version": "0.0.0",
   "description": "Build blog within several lines of codes.",
-  "source": "src/index.js",
+  "source": "src/index.jsx",
   "main": "dist/main.js",
   "module": "dist/module.js",
   "scripts": {
@@ -31,6 +31,10 @@
   },
   "dependencies": {
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "rehype-stringify": "^9.0.3",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "unified": "^10.1.2"
   }
 }
