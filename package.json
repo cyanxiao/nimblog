@@ -30,6 +30,7 @@
     "prettier": "2.6.2"
   },
   "dependencies": {
+    "html-react-parser": "^1.4.12",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "rehype-stringify": "^9.0.3",

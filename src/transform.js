@@ -5,12 +5,11 @@ import rehypeStringify from 'rehype-stringify';
 
 function getHomeHTML(homePage = document.body) {
   const homeContent = homePage.innerText;
-  const homeHTML = unified()
+  return unified()
     .use(remarkParse)
     .use(remarkRehype)
     .use(rehypeStringify)
-    .processSync(homeContent);
-  return homeHTML;
+    .processSync(homeContent).value;
 }
 
 export default getHomeHTML;
