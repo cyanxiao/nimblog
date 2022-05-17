@@ -1,5 +1,6 @@
 import * as ReactDOM from 'react-dom/client';
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Home from './components/Home';
 import getHomeHTML from './transform';
 
@@ -8,4 +9,8 @@ rootNode.style.whiteSpace = 'pre-wrap';
 const root = ReactDOM.createRoot(rootNode);
 const homeHTML = getHomeHTML(document.body);
 
-root.render(<Home homeHTML={homeHTML} />);
+root.render(
+  <BrowserRouter>
+    <Home homeHTML={homeHTML} />
+  </BrowserRouter>
+);
