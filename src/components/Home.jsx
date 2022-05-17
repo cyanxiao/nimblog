@@ -7,13 +7,17 @@ import { getPostContent } from '../transform';
 const fileNameRegex = /(?:[^/][\d\w.-]+)$(?<=(?:.md)|(?:.txt))/im;
 
 function Home({ homeHTML = '<h1>Your Blog</h1>' }) {
-  const [posts, setPosts] = useState({});
-  const postsHTML = {};
+  const [posts, setPosts] = useState([]);
+  const postsHTML = [];
   const options = {
     replace: async ({ name, attribs, children }) => {
       if (name === 'a' && attribs.href && fileNameRegex.test(attribs.href)) {
         const regexResult = fileNameRegex.exec(attribs.href);
-        postsHTML[regexResult[0]] = await getPostContent(attribs.href);
+        const postContent = await getPostContent(attribs.href);
+        postsHTML.push({
+          url: regexResult[0],
+          content: postContent,
+        });
         setPosts(postsHTML);
         return <Link to={attribs.href}>{domToReact(children)}</Link>;
       }
