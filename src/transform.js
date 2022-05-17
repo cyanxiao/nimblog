@@ -12,4 +12,13 @@ function getHomeHTML(homePage = document.body) {
     .processSync(homeContent).value;
 }
 
+function getPostContent(postsContent = {}, url = '') {
+  fetch(url)
+    .then((response) => response.text())
+    .then((value) => {
+      console.log(value);
+    });
+}
+
 export default getHomeHTML;
+export { getPostContent };
