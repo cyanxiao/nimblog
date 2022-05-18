@@ -12,6 +12,5 @@ const homeHTML = getHomeHTML(document.body);
 root.render(
   <BrowserRouter>
     <Home homeHTML={homeHTML} />
-    <Outlet />
   </BrowserRouter>
 );

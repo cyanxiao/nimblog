@@ -20,18 +20,19 @@ function Home({ homeHTML = '<h1>Your Blog</h1>' }) {
             content: postContent,
           });
           setPosts(postsHTML);
-          return (
-            <Link to={`/${regexResult[0].split('.')[0]}`}>
-              {domToReact(children)}
-            </Link>
-          );
         });
+        return (
+          <Link to={`/${regexResult[0].split('.')[0]}`}>
+            {domToReact(children)}
+          </Link>
+        );
       }
     },
   };
 
   useEffect(() => {
     const homeElement = parse(homeHTML, options);
+    console.log(homeElement);
     setHome(homeElement);
   }, []);
 
