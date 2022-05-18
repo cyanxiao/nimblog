@@ -1,6 +1,6 @@
 import * as ReactDOM from 'react-dom/client';
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Outlet } from 'react-router-dom';
 import Home from './components/Home';
 import getHomeHTML from './transform';
 
@@ -12,5 +12,6 @@ const homeHTML = getHomeHTML(document.body);
 root.render(
   <BrowserRouter>
     <Home homeHTML={homeHTML} />
+    <Outlet />
   </BrowserRouter>
 );
