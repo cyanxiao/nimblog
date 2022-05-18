@@ -9,15 +9,14 @@ function App({ homeHTML }) {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home homeHTML={homeHTML} />}>
-          {postsURL.map((postURL) => (
-            <Route
-              path={postURL.fileName}
-              key={postURL.fileName}
-              element={<Post postURL={postURL.url} />}
-            />
-          ))}
-        </Route>
+        <Route path="/" element={<Home homeHTML={homeHTML} />} />
+        {postsURL.map((postURL) => (
+          <Route
+            path={`/${postURL.fileName}`}
+            key={postURL.fileName}
+            element={<Post postURL={postURL.url} />}
+          />
+        ))}
       </Routes>
     </BrowserRouter>
   );
