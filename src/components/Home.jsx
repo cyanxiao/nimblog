@@ -10,8 +10,9 @@ function Home({ homeHTML = '<h1>Your Blog</h1>' }) {
   const [home, setHome] = useState(<div>loading</div>);
   const fileNameRegex = /(?:[^/][\d\w.-]+)$(?<=(?:.md)|(?:.txt))/im;
 
-  const [postsURL, setPostsURL] = useAtom(postsURLAtom);
+  const [, setPostsURL] = useAtom(postsURLAtom);
 
+  const postsURLInit = [];
   /**
    * replace <a> with <Link>
    */
@@ -19,12 +20,10 @@ function Home({ homeHTML = '<h1>Your Blog</h1>' }) {
     replace: ({ name, attribs, children }) => {
       if (name === 'a' && attribs.href && fileNameRegex.test(attribs.href)) {
         const regexResult = fileNameRegex.exec(attribs.href);
-        const prevPostsURL = postsURL;
-        prevPostsURL.push({
-          url: attribs.url,
+        postsURLInit.push({
+          url: attribs.href,
           fileName: regexResult[0].split('.')[0],
         });
-        setPostsURL(prevPostsURL);
         return (
           <Link to={`/${regexResult[0].split('.')[0]}`}>
             {domToReact(children)}
@@ -36,6 +35,7 @@ function Home({ homeHTML = '<h1>Your Blog</h1>' }) {
 
   useEffect(() => {
     const homeElement = parse(homeHTML, options);
+    setPostsURL(postsURLInit);
     setHome(homeElement);
   }, []);
 
