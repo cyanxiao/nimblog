@@ -1,8 +1,19 @@
 import parse from 'html-react-parser';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getPostContent } from '../transform';
 
-function Post({ postHTML = '<h1>Your Article</h1>' }) {
-  return <div className="heti">{parse(postHTML)}</div>;
+function Post({ postURL = '' }) {
+  const [postContent, setPostContent] = useState('');
+  useEffect(() => {
+    getPostContent(postURL).then((value) => {
+      setPostContent(value);
+    });
+  }, []);
+  return postContent ? (
+    <div className="heti">{parse(postContent)}</div>
+  ) : (
+    <div className="heti">loading</div>
+  );
 }
 
 export default Post;
