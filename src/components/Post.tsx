@@ -2,7 +2,11 @@ import parse from 'html-react-parser';
 import React, { useEffect, useState } from 'react';
 import { getPostContent } from '../transform';
 
-function Post({ postURL = '' }) {
+interface PostProps {
+  postURL: string;
+}
+
+function Post({ postURL = '' }: PostProps): JSX.Element {
   const [postContent, setPostContent] = useState('');
   useEffect(() => {
     getPostContent(postURL).then((value) => {

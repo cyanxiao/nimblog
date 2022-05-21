@@ -4,7 +4,11 @@ import { atom } from 'jotai';
 
 const postsURLAtom = atom([]);
 
-function Home({ homeHTML = '<h1>Your Blog</h1>' }) {
+interface HomeProps {
+  homeHTML: JSX.Element;
+}
+
+function Home({ homeHTML }: HomeProps): JSX.Element {
   return <div className="heti">{homeHTML}</div>;
 }
 

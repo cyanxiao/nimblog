@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import parse, { domToReact } from 'html-react-parser';
+import parse, { domToReact, HTMLReactParserOptions } from 'html-react-parser';
 import Home from './Home';
 import Post from './Post';
 
-function App({ homeHTML }) {
+interface AppProps {
+  homeHTML: string;
+}
+
+function App({ homeHTML }: AppProps): JSX.Element {
   const [home, setHome] = useState(<div>loading</div>);
   const fileNameRegex = /(?:[^/][\d\w.-]+)$(?<=(?:.md)|(?:.txt))/im;
   const [postsURL, setPostsURL] = useState([]);
-  const postsURLInit = [];
+  const postsURLInit: {
+    url: string;
+    fileName: string;
+  }[] = [];
   /**
    * replace <a> with <Link>
    */
@@ -30,7 +37,10 @@ function App({ homeHTML }) {
   };
 
   useEffect(() => {
-    const homeElement = parse(homeHTML, options);
+    const homeElement = parse(
+      homeHTML,
+      options as HTMLReactParserOptions
+    ) as JSX.Element;
     setPostsURL(postsURLInit);
     setHome(homeElement);
   }, []);
