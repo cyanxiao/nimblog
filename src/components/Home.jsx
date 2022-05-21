@@ -1,47 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import parse, { domToReact } from 'html-react-parser';
+import React from 'react';
 import 'heti/lib/heti.scss';
-import { Link, Outlet } from 'react-router-dom';
-import { atom, useAtom } from 'jotai';
+import { Outlet } from 'react-router-dom';
+import { atom } from 'jotai';
 
 const postsURLAtom = atom([]);
 
 function Home({ homeHTML = '<h1>Your Blog</h1>' }) {
-  const [home, setHome] = useState(<div>loading</div>);
-  const fileNameRegex = /(?:[^/][\d\w.-]+)$(?<=(?:.md)|(?:.txt))/im;
-
-  const [, setPostsURL] = useAtom(postsURLAtom);
-
-  const postsURLInit = [];
-  /**
-   * replace <a> with <Link>
-   */
-  const options = {
-    replace: ({ name, attribs, children }) => {
-      if (name === 'a' && attribs.href && fileNameRegex.test(attribs.href)) {
-        const regexResult = fileNameRegex.exec(attribs.href);
-        postsURLInit.push({
-          url: attribs.href,
-          fileName: regexResult[0].split('.')[0],
-        });
-        return (
-          <Link to={`/${regexResult[0].split('.')[0]}`}>
-            {domToReact(children)}
-          </Link>
-        );
-      }
-    },
-  };
-
-  useEffect(() => {
-    const homeElement = parse(homeHTML, options);
-    setPostsURL(postsURLInit);
-    setHome(homeElement);
-  }, []);
-
   return (
     <div className="heti">
-      {home}
+      {homeHTML}
       <Outlet />
     </div>
   );
