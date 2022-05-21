@@ -1,5 +1,6 @@
 import parse from 'html-react-parser';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getPostContent } from '../transform';
 
 interface PostProps {
@@ -14,7 +15,10 @@ function Post({ postURL = '' }: PostProps): JSX.Element {
     });
   }, []);
   return postContent ? (
-    <div className="heti">{parse(postContent)}</div>
+    <div className="heti">
+      <Link to="/">Back</Link>
+      {parse(postContent)}
+    </div>
   ) : (
     <div className="heti">loading</div>
   );
