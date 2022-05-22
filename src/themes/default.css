@@ -51,6 +51,5 @@ body {
 #post-frame .back {
     display: grid;
     place-items: center;
-    width: 100%;
     font-family: 'Montserrat', sans-serif;
 }
