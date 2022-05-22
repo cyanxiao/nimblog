@@ -1,6 +1,6 @@
 {
   "name": "nimblog",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Build blog within several lines of codes.",
   "source": "src/index.tsx",
   "main": "dist/main.js",
