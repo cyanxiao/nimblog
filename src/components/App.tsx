@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  BrowserRouter,
-  Link,
-  Route,
-  Routes,
-  HashRouter,
-} from 'react-router-dom';
+import { Link, Route, Routes, HashRouter } from 'react-router-dom';
 import parse, { domToReact, HTMLReactParserOptions } from 'html-react-parser';
 import Home from './Home';
 import Post from './Post';
@@ -16,7 +10,7 @@ interface AppProps {
 
 function App({ homeHTML }: AppProps): JSX.Element {
   const [home, setHome] = useState(<div>loading</div>);
-  const fileNameRegex = /(?:[^/][\d\w.-]+)$(?<=(?:.md)|(?:.txt))/im;
+  const fileNameRegex = /(?:[^/][\d\w.-]+)((?:.md)|(?:.txt))$/im;
   // TODO: update to be compatible with Safari
   const [postsURL, setPostsURL] = useState([]);
   const postsURLInit: {
