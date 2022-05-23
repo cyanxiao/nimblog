@@ -1,7 +1,7 @@
 {
   "name": "nimblog",
   "version": "0.0.2",
-  "description": "Build blog within several lines of codes.",
+  "description": "Build static blog within several lines of HTML and Markdown.",
   "source": "src/index.html",
   "main": "dist/main.js",
   "module": "dist/module.js",
