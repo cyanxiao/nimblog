@@ -2,6 +2,8 @@
 
 Nimblog requires only a few lines of HTML to deploy and is suitable for lightweight bloggers. The [official guide](https://nimblog.vercel.app/) is built with Nimblog, check it out for more information.
 
+![Nimblog](pic/front_1.png)
+
 * Runs on static website hosting platform, such as [GitHub Pages](https://pages.github.com/).
 * Easy to customize themes, as you only need to bring in your own CSS files.
 * Use [heti](https://github.com/sivan/heti) to optimize the layout.
