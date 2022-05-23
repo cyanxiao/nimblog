@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Link,
+  Route,
+  Routes,
+  HashRouter,
+} from 'react-router-dom';
 import parse, { domToReact, HTMLReactParserOptions } from 'html-react-parser';
 import Home from './Home';
 import Post from './Post';
@@ -11,6 +17,7 @@ interface AppProps {
 function App({ homeHTML }: AppProps): JSX.Element {
   const [home, setHome] = useState(<div>loading</div>);
   const fileNameRegex = /(?:[^/][\d\w.-]+)$(?<=(?:.md)|(?:.txt))/im;
+  // TODO: update to be compatible with Safari
   const [postsURL, setPostsURL] = useState([]);
   const postsURLInit: {
     url: string;
@@ -35,6 +42,7 @@ function App({ homeHTML }: AppProps): JSX.Element {
       }
     },
   };
+  // TODO: useSearchParams
 
   useEffect(() => {
     const homeElement = parse(
@@ -46,7 +54,7 @@ function App({ homeHTML }: AppProps): JSX.Element {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home homeHTML={home} />} />
         {postsURL.map((postURL) => (
@@ -57,7 +65,7 @@ function App({ homeHTML }: AppProps): JSX.Element {
           />
         ))}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
