@@ -1,9 +1,6 @@
 import React from 'react';
 import '../themes/default.css';
 import 'heti/lib/heti.scss';
-import { atom } from 'jotai';
-
-const postsURLAtom = atom([]);
 
 interface HomeProps {
   homeHTML: JSX.Element;
@@ -18,4 +15,3 @@ function Home({ homeHTML }: HomeProps): JSX.Element {
 }
 
 export default Home;
-export { postsURLAtom };
