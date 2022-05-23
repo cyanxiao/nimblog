@@ -15,7 +15,7 @@ function Post({ postURL = '' }: PostProps): JSX.Element {
     });
   }, []);
   return postContent ? (
-    <div className="heti post" id="post-frame">
+    <div className="heti post" id="post-frame" style={{ whiteSpace: 'normal' }}>
       {parse(postContent)}
       <Link to="/" className="back">
         ← Back
