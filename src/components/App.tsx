@@ -11,7 +11,6 @@ interface AppProps {
 function App({ homeHTML }: AppProps): JSX.Element {
   const [home, setHome] = useState(<div>loading</div>);
   const fileNameRegex = /(?:[^/][\d\w.-]+)((?:.md)|(?:.txt))$/im;
-  // TODO: update to be compatible with Safari
   const [postsURL, setPostsURL] = useState([]);
   const postsURLInit: {
     url: string;
@@ -36,7 +35,6 @@ function App({ homeHTML }: AppProps): JSX.Element {
       }
     },
   };
-  // TODO: useSearchParams
 
   useEffect(() => {
     const homeElement = parse(
