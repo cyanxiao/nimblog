@@ -57,3 +57,9 @@ body {
 #post-frame pre {
     width: 90vw;
 }
+
+@media screen and (min-width: 640px) {
+    #post-frame pre {
+        width: inherit;
+    }
+}
