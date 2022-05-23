@@ -53,3 +53,7 @@ body {
     place-items: center;
     font-family: 'Montserrat', sans-serif;
 }
+
+#post-frame pre {
+    width: 90vw;
+}
