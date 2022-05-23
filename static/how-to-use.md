@@ -1,5 +1,5 @@
 # How to Use
-# How to Use
+
 Nimblog requires only a few lines of HTML to deploy and is suitable for lightweight bloggers.
 
 * Runs on static website hosting platform, such as [GitHub Pages](https://pages.github.com/).
