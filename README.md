@@ -1,5 +1,5 @@
 ![Header](pic/header.png)
-
+<div align='center'>![npm](https://img.shields.io/npm/dm/nimblog) ![NPM](https://img.shields.io/npm/l/nimblog) ![GitHub top language](https://img.shields.io/github/languages/top/imchell/nimblog)</div>
 ---
 
 # Nimblog
@@ -47,7 +47,7 @@ As you can see, you can write Markdown directly in `<body>` and link to your Mar
 > **Note**
 > Markdown in `<body>` supports any kind of links but only ones ending with `.md` & `.txt` and with `text\markdown` content type are parsed as blog post links under the hood.
 
-## Live Preview
+## 🔎 Live Preview
 
 Copy & paste code below to edit online with [W3Schools Online Editor](https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello).
 
@@ -71,3 +71,7 @@ Copy & paste code below to edit online with [W3Schools Online Editor](https://ww
 
 > **Note**
 > If you want to try it in other online editor like StackBlitz, make sure to turn off preffier or formatter so that Markdown content in HTML will not be destructed. 
+
+## 🧪 Contribution
+
+Feel free to contribute to Nimblog. Visit [official guide contribution page](https://nimblog.vercel.app/#/contribution).
