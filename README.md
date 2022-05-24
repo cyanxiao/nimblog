@@ -24,15 +24,16 @@ Then paste the following content in `index.html`.
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/nimblog/dist/production/nimblog.css">
-    <meta charset='UTF-8'>
-    <title>Nimblog</title>
+  <link rel="stylesheet" href="https://unpkg.com/nimblog/dist/production/index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset='UTF-8'>
+  <title>Nimblog</title>
 </head>
 <body>
 # [Your Blog](/)
 - [your essay 1](your_essay_1.md)
 - [your essay 2](your_essay_2.md)
-<script type='module' src='https://unpkg.com/nimblog/dist/production/nimblog.js'></script>
+<script type='module' src='https://unpkg.com/nimblog/dist/production/index.css'></script>
 </body>
 </html>
 ```
@@ -50,15 +51,16 @@ Copy & paste code below to edit online with [W3Schools Online Editor](https://ww
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/nimblog/dist/production/nimblog.css">
-    <meta charset='UTF-8'>
-    <title>Nimblog</title>
+  <link rel="stylesheet" href="https://unpkg.com/nimblog/dist/production/index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset='UTF-8'>
+  <title>Nimblog</title>
 </head>
 <body>
 # [Nimblog Intro](/)
 - [How to Use](https://unpkg.com/nimblog/dist/production/how-to-use.md)
 - [Contribution](https://unpkg.com/nimblog/dist/production/contribution.md)
-<script type='module' src='https://unpkg.com/nimblog/dist/production/nimblog.js'></script>
+<script type='module' src='https://unpkg.com/nimblog/dist/production/index.js'></script>
 </body>
 </html>
 ```
