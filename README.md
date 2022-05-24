@@ -1,3 +1,7 @@
+![Header](pic/header.png)
+
+---
+
 # Nimblog
 
 Nimblog requires only a few lines of HTML to deploy and is suitable for lightweight bloggers. The [official guide](https://nimblog.vercel.app/) is built with Nimblog, check it out for more information.
