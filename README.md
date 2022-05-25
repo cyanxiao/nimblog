@@ -39,7 +39,7 @@ Then paste the following content in `index.html`.
 # [Your Blog](/)
 - [your essay 1](your_essay_1.md)
 - [your essay 2](your_essay_2.md)
-<script type='module' src='https://unpkg.com/nimblog/dist/production/index.css'></script>
+<script type='module' src='https://unpkg.com/nimblog/dist/production/index.js'></script>
 </body>
 </html>
 ```
