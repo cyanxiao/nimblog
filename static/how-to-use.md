@@ -62,4 +62,4 @@ Copy & paste code below to edit online with [W3Schools Online Editor](https://ww
 ```
 
 > **Note**
-> If you want to try it in other online editor like StackBlitz, make sure to turn off preffier or formatter so that Markdown content in HTML will not be destructed. 
+> If you want to try it in other online editor like StackBlitz, make sure to turn off prettier or formatter so that Markdown content in HTML will not be destructed. 
