@@ -1,7 +1,3 @@
-![Header](pic/header.png)
-
----
-
 # Nimblog
 
 ![npm](https://img.shields.io/npm/dm/nimblog) ![NPM](https://img.shields.io/npm/l/nimblog) ![GitHub top language](https://img.shields.io/github/languages/top/imchell/nimblog)
