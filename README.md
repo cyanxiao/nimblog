@@ -2,7 +2,7 @@
 
 ![npm](https://img.shields.io/npm/dm/nimblog) ![NPM](https://img.shields.io/npm/l/nimblog) ![GitHub top language](https://img.shields.io/github/languages/top/imchell/nimblog)
 
-Nimblog requires only a few lines of HTML to deploy and is suitable for lightweight bloggers. The [official guide](https://nimblog.vercel.app/) is built with Nimblog, check it out for more information.
+Nimblog requires only a few lines of HTML to deploy and is suitable for lightweight bloggers. The [official side](https://nimblog.vercel.app/) is built with Nimblog, check it out for more information.
 
 ![Nimblog](pic/front_1.png)
 
