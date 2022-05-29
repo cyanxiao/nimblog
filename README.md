@@ -72,4 +72,10 @@ Copy & paste code below to edit online with [W3Schools Online Editor](https://ww
 
 ## 🧪 Contribution
 
-Feel free to contribute to Nimblog. Visit [official guide contribution page](https://nimblog.vercel.app/#/contribution).
+Feel free to contribute to Nimblog.
+
+Run `yarn` to install all dependencies.
+
+Nimblog uses Parcel as the build tool. Run `yarn dev` to make live changes to the project. Run `yarn build` to build the production version.
+
+Note that Parcel does not support invoking static assets natively, so static files are put in `\static` to make sure they can be accessed with HMR.

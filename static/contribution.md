@@ -1,5 +1,6 @@
 # Contribution
-Run `yarn add` to install all dependencies.
+
+Run `yarn` to install all dependencies.
 
 Nimblog uses Parcel as the build tool. Run `yarn dev` to make live changes to the project. Run `yarn build` to build the production version.
 
